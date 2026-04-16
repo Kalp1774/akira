@@ -24,7 +24,7 @@
 
 Akira is a complete offensive security skill suite that runs **natively inside your AI coding environment**.
 
-No Docker. No server. No 40-tool pre-install hell. No hallucinated findings.
+No server. No 40-tool pre-install hell. No hallucinated findings.
 
 **Six phases. One chain. One deliverable report.**
 
