@@ -25,8 +25,7 @@
 
 </div>
 
-> **Demo:** Run `bash demo/simulate.sh` to see a full engagement walkthrough in your terminal.
-> Record your own GIF with `vhs demo.tape` ([install vhs](https://github.com/charmbracelet/vhs)).
+![Akira Demo](demo.gif)
 
 ---
 
