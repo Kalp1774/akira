@@ -1,10 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
 <defs>
-  <!-- Outer atmospheric haze -->
   <filter id="haze" x="-120%" y="-120%" width="340%" height="340%">
     <feGaussianBlur stdDeviation="38"/>
   </filter>
-  <!-- Corona glow (double merge for intensity) -->
   <filter id="corona" x="-60%" y="-60%" width="220%" height="220%">
     <feGaussianBlur stdDeviation="14" result="b1"/>
     <feGaussianBlur stdDeviation="6" in="SourceGraphic" result="b2"/>
@@ -15,112 +13,89 @@
       <feMergeNode in="SourceGraphic"/>
     </feMerge>
   </filter>
-  <!-- Tight inner glow -->
   <filter id="shine" x="-20%" y="-20%" width="140%" height="140%">
     <feGaussianBlur stdDeviation="4" result="b"/>
     <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
-  <!-- Horizontal scan-line texture -->
   <pattern id="sl" x="0" y="0" width="900" height="6" patternUnits="userSpaceOnUse">
     <rect x="0" y="0" width="900" height="3" fill="#000000" opacity="0.10"/>
   </pattern>
 </defs>
 
+<!-- Force text fill colors - overrides GitHub page CSS -->
+<style>
+  .tag1 { fill: #00ff41 !important; opacity: 0.78 !important; }
+  .tag2 { fill: #00ff41 !important; opacity: 0.42 !important; }
+</style>
+
 <!-- Background + scan texture -->
-<rect width="900" height="500" fill="#070b14"/>
+<rect width="900" height="500" fill="#070d07"/>
 <rect width="900" height="500" fill="url(#sl)"/>
 
 <!-- Corner brackets -->
-<line x1="0"      y1="0"   x2="78"    y2="0"   stroke="#ff2030" stroke-width="1.5" opacity="0.30"/>
-<line x1="0"      y1="0"   x2="0"     y2="60"  stroke="#ff2030" stroke-width="1.5" opacity="0.30"/>
-<line x1="822" y1="0"   x2="900"   y2="0"   stroke="#ff2030" stroke-width="1.5" opacity="0.30"/>
-<line x1="900"    y1="0"   x2="900"   y2="60"  stroke="#ff2030" stroke-width="1.5" opacity="0.30"/>
-<line x1="0"      y1="500" x2="78"    y2="500" stroke="#ff2030" stroke-width="1.5" opacity="0.30"/>
-<line x1="0"      y1="440" x2="0"  y2="500" stroke="#ff2030" stroke-width="1.5" opacity="0.30"/>
-<line x1="822" y1="500" x2="900"   y2="500" stroke="#ff2030" stroke-width="1.5" opacity="0.30"/>
-<line x1="900"    y1="440" x2="900" y2="500" stroke="#ff2030" stroke-width="1.5" opacity="0.30"/>
+<line x1="0"      y1="0"      x2="78"    y2="0"      stroke="#00ff41" stroke-width="1.5" opacity="0.35"/>
+<line x1="0"      y1="0"      x2="0"     y2="60"     stroke="#00ff41" stroke-width="1.5" opacity="0.35"/>
+<line x1="822" y1="0"      x2="900"   y2="0"      stroke="#00ff41" stroke-width="1.5" opacity="0.35"/>
+<line x1="900"    y1="0"      x2="900"   y2="60"     stroke="#00ff41" stroke-width="1.5" opacity="0.35"/>
+<line x1="0"      y1="500"    x2="78"    y2="500"    stroke="#00ff41" stroke-width="1.5" opacity="0.35"/>
+<line x1="0"      y1="440" x2="0"     y2="500"    stroke="#00ff41" stroke-width="1.5" opacity="0.35"/>
+<line x1="822" y1="500"    x2="900"   y2="500"    stroke="#00ff41" stroke-width="1.5" opacity="0.35"/>
+<line x1="900"    y1="440" x2="900"   y2="500"    stroke="#00ff41" stroke-width="1.5" opacity="0.35"/>
 
-<!-- Horizontal frame lines flanking the text -->
-<line x1="85" y1="152" x2="815" y2="152" stroke="#ff2030" stroke-width="0.8" opacity="0.20"/>
-<line x1="85" y1="306" x2="815" y2="306" stroke="#ff2030" stroke-width="0.8" opacity="0.20"/>
+<!-- Text frame lines -->
+<line x1="85" y1="152" x2="815" y2="152" stroke="#00ff41" stroke-width="0.8" opacity="0.20"/>
+<line x1="85" y1="306" x2="815" y2="306" stroke="#00ff41" stroke-width="0.8" opacity="0.20"/>
 
-<!-- ══════════════════════════════════════════════ -->
-<!-- LAYER 1 — Outer atmospheric haze (breathing)  -->
-<!-- ══════════════════════════════════════════════ -->
+<!-- LAYER 1: Outer atmospheric haze (breathing) -->
 <text x="450" y="282" text-anchor="middle"
       font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif" font-weight="900"
       font-size="158" letter-spacing="18"
-      fill="#ff2030" opacity="0.14" filter="url(#haze)">AKIRA
-  <animate attributeName="opacity"
-    values="0.09;0.20;0.09"
-    dur="5s" calcMode="spline"
-    keyTimes="0;0.5;1"
-    keySplines="0.4 0 0.6 1;0.4 0 0.6 1"
-    repeatCount="indefinite"/>
+      fill="#00cc35" opacity="0.14" filter="url(#haze)">AKIRA
+  <animate attributeName="opacity" values="0.09;0.20;0.09"
+    dur="5s" calcMode="spline" keyTimes="0;0.5;1"
+    keySplines="0.4 0 0.6 1;0.4 0 0.6 1" repeatCount="indefinite"/>
 </text>
 
-<!-- ═══════════════════════════════════════════════════ -->
-<!-- LAYER 2 — Corona glow (opposite breathing phase)  -->
-<!-- ═══════════════════════════════════════════════════ -->
+<!-- LAYER 2: Corona glow (opposite breath phase) -->
 <text x="450" y="282" text-anchor="middle"
       font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif" font-weight="900"
       font-size="158" letter-spacing="18"
-      fill="#ff2030" opacity="0.50" filter="url(#corona)">AKIRA
-  <animate attributeName="opacity"
-    values="0.58;0.36;0.58"
-    dur="5s" begin="2.5s" calcMode="spline"
-    keyTimes="0;0.5;1"
-    keySplines="0.4 0 0.6 1;0.4 0 0.6 1"
-    repeatCount="indefinite"/>
+      fill="#00ff41" opacity="0.50" filter="url(#corona)">AKIRA
+  <animate attributeName="opacity" values="0.58;0.36;0.58"
+    dur="5s" begin="2.5s" calcMode="spline" keyTimes="0;0.5;1"
+    keySplines="0.4 0 0.6 1;0.4 0 0.6 1" repeatCount="indefinite"/>
 </text>
 
-<!-- ══════════════════════════════════════ -->
-<!-- LAYER 3 — Tight inner glow (static)   -->
-<!-- ══════════════════════════════════════ -->
+<!-- LAYER 3: Tight inner glow -->
 <text x="450" y="282" text-anchor="middle"
       font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif" font-weight="900"
       font-size="158" letter-spacing="18"
-      fill="#ff3848" opacity="0.88" filter="url(#shine)">AKIRA</text>
+      fill="#44ff6a" opacity="0.88" filter="url(#shine)">AKIRA</text>
 
-<!-- ════════════════════════════════════════════════════════ -->
-<!-- Chromatic aberration — RED layer (glitch only, hidden)  -->
-<!-- ════════════════════════════════════════════════════════ -->
+<!-- Chromatic aberration: RED layer (glitch only) -->
 <g opacity="0">
-  <animate attributeName="opacity"
-    values="0;0;0;0;0.80;0.80;0.80;0.80;0.80;0;0;0" keyTimes="0;0.10;0.55;0.620;0.640;0.660;0.680;0.700;0.720;0.740;0.850;1"
-    dur="10s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;0;0;0;0.80;0.80;0.80;0.80;0.80;0;0;0" keyTimes="0;0.10;0.55;0.620;0.640;0.660;0.680;0.700;0.720;0.740;0.850;1" dur="10s" repeatCount="indefinite"/>
   <animateTransform attributeName="transform" type="translate"
-    values="0,0; 0,0; 0,0; 0,0;-7,0; 7,0;-6,1; 6,-1;-2,0; 0,0; 0,0;0,0" keyTimes="0;0.10;0.55;0.620;0.640;0.660;0.680;0.700;0.720;0.740;0.850;1"
-    dur="10s" repeatCount="indefinite"/>
+    values="0,0;0,0;0,0;0,0;-7,0;7,0;-6,1;6,-1;-2,0;0,0;0,0;0,0" keyTimes="0;0.10;0.55;0.620;0.640;0.660;0.680;0.700;0.720;0.740;0.850;1" dur="10s" repeatCount="indefinite"/>
   <text x="450" y="282" text-anchor="middle"
         font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif" font-weight="900"
-        font-size="158" letter-spacing="18"
-        fill="#ff0018">AKIRA</text>
+        font-size="158" letter-spacing="18" fill="#ff2000">AKIRA</text>
 </g>
 
-<!-- ════════════════════════════════════════════════════════ -->
-<!-- Chromatic aberration — BLUE layer (glitch only, hidden) -->
-<!-- ════════════════════════════════════════════════════════ -->
+<!-- Chromatic aberration: BLUE layer (glitch only) -->
 <g opacity="0">
-  <animate attributeName="opacity"
-    values="0;0;0;0;0.80;0.80;0.80;0.80;0.80;0;0;0" keyTimes="0;0.10;0.55;0.620;0.640;0.660;0.680;0.700;0.720;0.740;0.850;1"
-    dur="10s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;0;0;0;0.80;0.80;0.80;0.80;0.80;0;0;0" keyTimes="0;0.10;0.55;0.620;0.640;0.660;0.680;0.700;0.720;0.740;0.850;1" dur="10s" repeatCount="indefinite"/>
   <animateTransform attributeName="transform" type="translate"
-    values="0,0; 0,0; 0,0; 0,0; 7,0;-7,0; 6,-1;-6,1; 2,0; 0,0; 0,0;0,0" keyTimes="0;0.10;0.55;0.620;0.640;0.660;0.680;0.700;0.720;0.740;0.850;1"
-    dur="10s" repeatCount="indefinite"/>
+    values="0,0;0,0;0,0;0,0;7,0;-7,0;6,-1;-6,1;2,0;0,0;0,0;0,0" keyTimes="0;0.10;0.55;0.620;0.640;0.660;0.680;0.700;0.720;0.740;0.850;1" dur="10s" repeatCount="indefinite"/>
   <text x="450" y="282" text-anchor="middle"
         font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif" font-weight="900"
-        font-size="158" letter-spacing="18"
-        fill="#1828ff">AKIRA</text>
+        font-size="158" letter-spacing="18" fill="#0066ff">AKIRA</text>
 </g>
 
-<!-- ══════════════════════════════════════════════════════ -->
-<!-- LAYER 4 — Crisp white text with glitch jitter         -->
-<!-- ══════════════════════════════════════════════════════ -->
+<!-- LAYER 4: Crisp white text with glitch jitter -->
 <g>
   <animateTransform attributeName="transform" type="translate"
-    values="0,0; 0,0; 0,0; 0,0;-3,0; 3,0;-3,1; 3,-1;-1,0; 0,0; 0,0;0,0" keyTimes="0;0.10;0.55;0.620;0.640;0.660;0.680;0.700;0.720;0.740;0.850;1"
-    dur="10s" repeatCount="indefinite"/>
+    values="0,0;0,0;0,0;0,0;-3,0;3,0;-3,1;3,-1;-1,0;0,0;0,0;0,0" keyTimes="0;0.10;0.55;0.620;0.640;0.660;0.680;0.700;0.720;0.740;0.850;1" dur="10s" repeatCount="indefinite"/>
   <text x="450" y="282" text-anchor="middle"
         font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif" font-weight="900"
         font-size="158" letter-spacing="18"
@@ -128,18 +103,18 @@
 </g>
 
 <!-- Sweeping CRT scan line -->
-<rect x="0" y="-3" width="900" height="3" fill="#ff2030" opacity="0.07">
+<rect x="0" y="-3" width="900" height="3" fill="#00ff41" opacity="0.07">
   <animate attributeName="y" values="-3;503" dur="5s" repeatCount="indefinite"/>
 </rect>
 
-<!-- Tagline -->
-<text x="450" y="362" text-anchor="middle"
+<!-- Tagline - class forces color override -->
+<text x="450" y="362" class="tag1" text-anchor="middle"
       font-family="'Courier New', Courier, monospace" font-size="11.5"
-      fill="#ff2030" opacity="0.72" letter-spacing="6">PENTEST CO-PILOT · AI SKILL SUITE</text>
+      fill="#00ff41" style="fill:#00ff41" letter-spacing="6">PENTEST CO-PILOT · AI SKILL SUITE</text>
 
 <!-- Version -->
-<text x="450" y="386" text-anchor="middle"
+<text x="450" y="386" class="tag2" text-anchor="middle"
       font-family="'Courier New', Courier, monospace" font-size="9"
-      fill="#ff2030" opacity="0.42" letter-spacing="3">HYDRA v1.0.0 · 12 SKILLS · 5 PLATFORMS</text>
+      fill="#00ff41" style="fill:#00ff41" letter-spacing="3">HYDRA v1.0.0 · 12 SKILLS · 5 PLATFORMS</text>
 
 </svg>
