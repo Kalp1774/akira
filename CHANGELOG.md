@@ -1,10 +1,15 @@
 # Changelog
 
 All notable changes to Akira will be documented here.
+Each version is named after a creature, animal, or mythical legend based on its behavior.
 
 ---
 
-## [1.0.0] - 2026-04-16
+## [Hydra - v1.0.0] - 2026-04-16
+
+*12 heads. 12 skills. The full attack chain.*
+
+Like the mythological hydra, each skill operates independently but feeds the same body. Cut one path, three more open.
 
 ### Added - Core 7-Phase Engagement Lifecycle
 - `plan-engagement` - scope, PTT generation, session.json initialization
@@ -15,7 +20,7 @@ All notable changes to Akira will be documented here.
 - `triage` - severity clustering, confidence scoring (0-100), FP verification gate, deduplication
 - `report` - pentest report + HackerOne/Bugcrowd submission format
 
-### Added - Specialized Attack Modules (Month 1)
+### Added - Specialized Attack Modules
 - `ad-attacks` - BloodHound path analysis, Kerberoasting, AS-REP roasting, DCSync, Pass-the-Hash,
   Pass-the-Ticket, ADCS ESC1-8, unconstrained/constrained delegation, Golden/Silver Ticket
 - `oauth-attacks` - redirect URI bypass, CSRF, PKCE downgrade, JWT confusion, implicit flow token theft,
@@ -49,23 +54,43 @@ All notable changes to Akira will be documented here.
 
 ## Upcoming
 
-### [1.1.0] - Month 2 (May 2026)
+### [Basilisk - v1.1.0] - May 2026
+
+*Kills through indirect contact. Supply chain, deserialization, prototype pollution.*
+
+The basilisk doesn't need to strike directly - it kills through its gaze. This release targets attack surfaces that compromise through indirect means.
+
 - `graphql` - introspection abuse, batching, field-level authz bypass
 - `deserialization` - ysoserial, PHPGGC, pickle chains
 - `prototype-pollution` - Node.js client + server RCE chains
 - `supply-chain` - dependency confusion, typosquatting, namespace squatting
 - `ci-cd-audit` - 9 GitHub Actions attack vectors
 
-### [1.2.0] - Month 3 (June 2026)
-- Akira Context Engine - auto CVE lookup for detected stack + HackerOne public reports
+### [Raven - v1.2.0] - June 2026
+
+*Legendary memory. Dark perception. Intelligence that accumulates.*
+
+Ravens are known for long memory and pattern recognition. This release gives Akira a memory of its own - context that builds across sessions and targets.
+
+- Akira Context Engine - auto CVE lookup for detected stack + HackerOne public report correlation
 - `cache-attacks` - poisoning + deception unified playbook
 - `csp-bypass` - JSONP, nonce reuse, base-URI injection
 
-### [1.3.0] - Month 4 (July 2026)
+### [Phantom - v1.3.0] - July 2026
+
+*Slips through defenses. No trace. No certificate. No barrier.*
+
+Mobile targets and Burp integration - expanding Akira's reach into surfaces that traditional tools struggle to touch.
+
 - `mobile` - Android APK, Firebase, iOS, Frida certificate pinning bypass
 - `burp-integration` - native Burp MCP tools (Repeater, Intruder, proxy history)
 
-### [2.0.0] - Month 6 (September 2026)
+### [Leviathan - v2.0.0] - September 2026
+
+*Ancient. Massive. Unchained. Remembers everything.*
+
+The leviathan is not a single strike - it is a persistent force that cannot be stopped once awakened. Akira Brain gives the tool memory across sessions. Nothing is forgotten.
+
 - Akira Brain - persistent attack tree across sessions
 - `postmap-recon` - PostmapDB integration (leaked Postman collections -> live secrets)
 - `red-team` - MITRE ATT&CK full emulation
