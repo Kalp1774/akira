@@ -11,6 +11,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-12-brightgreen?style=flat-square)](#skills)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](CONTRIBUTING.md)
+[![CI](https://github.com/Kalp1774/akira/actions/workflows/validate-skills.yml/badge.svg)](https://github.com/Kalp1774/akira/actions/workflows/validate-skills.yml)
 
 **[Install in 30 seconds](#install) · [Real Findings](#proof-it-works) · [Roadmap](#roadmap) · [Wiki](../../wiki)**
 
@@ -81,7 +82,7 @@ Full attack technique walkthroughs in the [Wiki - Attack Techniques](../../wiki/
 
 ## Proof It Works
 
-Real anonymized findings made with Akira. Full writeups in [FINDINGS.md](FINDINGS.md).
+Real anonymized findings made with Akira. Findings are anonymized per responsible disclosure. Details shared privately.
 
 | # | Type | Severity | Bounty | Skill Chain |
 |---|---|---|---|---|
