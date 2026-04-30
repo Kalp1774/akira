@@ -33,12 +33,12 @@ RUN apt-get update && apt-get install -y \
     tcpdump tshark dnsutils whois \
     aircrack-ng \
     # web
-    sqlmap nikto whatweb gobuster dirsearch wfuzz feroxbuster \
+    sqlmap nikto whatweb gobuster dirsearch wfuzz \
     # password
     hashcat john hydra crunch \
     # AD / Windows
     responder evil-winrm impacket-scripts \
-    crackmapexec certipy-ad bloodhound-python kerbrute \
+    crackmapexec \
     # misc
     seclists wordlists \
     wabt \
