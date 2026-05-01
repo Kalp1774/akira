@@ -38,7 +38,7 @@ RUN apt-get update && apt-get install -y \
     hashcat john hydra crunch \
     # AD / Windows
     responder evil-winrm impacket-scripts \
-    crackmapexec nxc \
+    crackmapexec \
     # misc
     seclists wordlists \
     wabt \
@@ -82,31 +82,23 @@ RUN go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest    
 # ── Nuclei templates ──────────────────────────────────────────────────────────
 RUN nuclei -update-templates 2>/dev/null || true
 
-# ── Python pip tools ──────────────────────────────────────────────────────────
+# ── Python pip tools (stable - must succeed) ──────────────────────────────────
 RUN pip3 install --no-cache-dir --break-system-packages \
     impacket \
     bloodhound \
     certipy-ad \
     pypykatz \
-    roadtx \
-    pacu \
-    prowler \
-    cloudsplaining \
-    semgrep \
-    arjun \
-    waymore \
-    coercer \
-    dsinternals \
-    ldapdomaindump \
-    pwncat-cs \
-    objection \
-    frida-tools \
-    paramspider \
     requests \
     boto3 \
     google-cloud-storage \
     azure-identity \
     azure-mgmt-compute
+
+# ── Python pip tools (optional - failures are non-fatal) ──────────────────────
+RUN pip3 install --no-cache-dir --break-system-packages \
+    roadtx pacu prowler cloudsplaining semgrep arjun waymore \
+    coercer dsinternals ldapdomaindump pwncat-cs objection frida-tools paramspider \
+    2>/dev/null || echo "WARN: some optional pip packages skipped"
 
 # ── Git-cloned Python tools ───────────────────────────────────────────────────
 WORKDIR /opt
