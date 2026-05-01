@@ -12,7 +12,7 @@ ENV PATH=$PATH:/usr/local/go/bin:/root/go/bin:/opt/tools/bin
 
 # ── Base & build dependencies ────────────────────────────────────────────────
 RUN apt-get update && apt-get install -y \
-    curl wget git jq vim unzip zip p7zip-full \
+    curl wget git jq vim unzip zip p7zip-full gnupg \
     python3 python3-pip python3-dev python3-venv \
     ruby ruby-dev rubygems \
     default-jdk nodejs npm \
@@ -300,15 +300,15 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] \
     curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg \
         | gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg && \
     apt-get update && apt-get install -y google-cloud-cli && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* 2>/dev/null || true
 
 # Azure CLI
 RUN curl -fsSL https://aka.ms/InstallAzureCLIDeb | bash 2>/dev/null || \
-    pip3 install --no-cache-dir --break-system-packages azure-cli
+    pip3 install --no-cache-dir --break-system-packages --ignore-installed azure-cli 2>/dev/null || true
 
 # kubectl
 RUN curl -sLO "https://dl.k8s.io/release/$(curl -sL https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && \
-    chmod +x kubectl && mv kubectl /usr/local/bin/
+    chmod +x kubectl && mv kubectl /usr/local/bin/ 2>/dev/null || true
 
 # AzureHound - Azure AD data collector
 RUN AZHOUND_VER=$(curl -s https://api.github.com/repos/BloodHoundAD/AzureHound/releases/latest \
@@ -318,7 +318,7 @@ RUN AZHOUND_VER=$(curl -s https://api.github.com/repos/BloodHoundAD/AzureHound/r
     unzip -q /tmp/azurehound.zip -d /usr/local/bin && \
     chmod +x /usr/local/bin/azurehound-linux-amd64 && \
     ln -sf /usr/local/bin/azurehound-linux-amd64 /usr/local/bin/azurehound && \
-    rm /tmp/azurehound.zip
+    rm /tmp/azurehound.zip 2>/dev/null || true
 
 # ── SecLists wordlists ────────────────────────────────────────────────────────
 RUN git clone --depth 1 https://github.com/danielmiessler/SecLists.git /opt/SecLists
