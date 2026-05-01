@@ -83,7 +83,7 @@ RUN go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest    
 RUN nuclei -update-templates 2>/dev/null || true
 
 # ── Python pip tools (stable - must succeed) ──────────────────────────────────
-RUN pip3 install --no-cache-dir --break-system-packages \
+RUN pip3 install --no-cache-dir --break-system-packages --ignore-installed \
     impacket \
     bloodhound \
     certipy-ad \
@@ -95,7 +95,7 @@ RUN pip3 install --no-cache-dir --break-system-packages \
     azure-mgmt-compute
 
 # ── Python pip tools (optional - failures are non-fatal) ──────────────────────
-RUN pip3 install --no-cache-dir --break-system-packages \
+RUN pip3 install --no-cache-dir --break-system-packages --ignore-installed \
     roadtx pacu prowler cloudsplaining semgrep arjun waymore \
     coercer dsinternals ldapdomaindump pwncat-cs objection frida-tools paramspider \
     2>/dev/null || echo "WARN: some optional pip packages skipped"
