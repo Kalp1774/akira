@@ -209,19 +209,16 @@ RUN GITLEAKS_VER=$(curl -s https://api.github.com/repos/gitleaks/gitleaks/releas
     wget -q "https://github.com/gitleaks/gitleaks/releases/download/${GITLEAKS_VER}/gitleaks_${GITLEAKS_VER#v}_linux_x64.tar.gz" \
         -O /tmp/gitleaks.tar.gz && \
     tar -xzf /tmp/gitleaks.tar.gz -C /usr/local/bin gitleaks && \
-    rm /tmp/gitleaks.tar.gz
+    rm /tmp/gitleaks.tar.gz 2>/dev/null || true
 
 # trufflehog
-RUN wget -q "https://github.com/trufflesecurity/trufflehog/releases/latest/download/trufflehog_linux_amd64.tar.gz" \
-        -O /tmp/trufflehog.tar.gz && \
-    tar -xzf /tmp/trufflehog.tar.gz -C /usr/local/bin trufflehog && \
-    rm /tmp/trufflehog.tar.gz
+RUN go install github.com/trufflesecurity/trufflehog/v3@latest 2>/dev/null || true
 
 # kerbrute
 RUN KERBRUTE_VER=$(curl -s https://api.github.com/repos/ropnop/kerbrute/releases/latest \
         | jq -r '.tag_name') && \
     wget -q "https://github.com/ropnop/kerbrute/releases/download/${KERBRUTE_VER}/kerbrute_linux_amd64" \
-        -O /usr/local/bin/kerbrute && chmod +x /usr/local/bin/kerbrute
+        -O /usr/local/bin/kerbrute && chmod +x /usr/local/bin/kerbrute 2>/dev/null || true
 
 # feroxbuster (latest binary)
 RUN FEROX_VER=$(curl -s https://api.github.com/repos/epi052/feroxbuster/releases/latest \
@@ -229,13 +226,13 @@ RUN FEROX_VER=$(curl -s https://api.github.com/repos/epi052/feroxbuster/releases
     wget -q "https://github.com/epi052/feroxbuster/releases/download/${FEROX_VER}/x86_64-linux-feroxbuster.zip" \
         -O /tmp/ferox.zip && \
     unzip -q /tmp/ferox.zip -d /usr/local/bin && chmod +x /usr/local/bin/feroxbuster && \
-    rm /tmp/ferox.zip
+    rm /tmp/ferox.zip 2>/dev/null || true
 
 # ysoserial - Java deserialization payloads
 RUN wget -q "https://github.com/frohoff/ysoserial/releases/latest/download/ysoserial-all.jar" \
         -O /usr/local/share/ysoserial.jar && \
     echo '#!/bin/bash\njava -jar /usr/local/share/ysoserial.jar "$@"' > /usr/local/bin/ysoserial && \
-    chmod +x /usr/local/bin/ysoserial
+    chmod +x /usr/local/bin/ysoserial 2>/dev/null || true
 
 # jadx - Android APK decompiler
 RUN JADX_VER=$(curl -s https://api.github.com/repos/skylot/jadx/releases/latest \
@@ -245,7 +242,7 @@ RUN JADX_VER=$(curl -s https://api.github.com/repos/skylot/jadx/releases/latest 
     unzip -q /tmp/jadx.zip -d /opt/jadx && \
     ln -sf /opt/jadx/bin/jadx /usr/local/bin/jadx && \
     ln -sf /opt/jadx/bin/jadx-gui /usr/local/bin/jadx-gui && \
-    rm /tmp/jadx.zip
+    rm /tmp/jadx.zip 2>/dev/null || true
 
 # apk-mitm - APK certificate pinning bypass
 RUN npm install -g apk-mitm 2>/dev/null || true
@@ -254,7 +251,7 @@ RUN npm install -g apk-mitm 2>/dev/null || true
 RUN wget -q "https://github.com/BishopFox/sliver/releases/latest/download/sliver-server_linux" \
         -O /usr/local/bin/sliver-server && chmod +x /usr/local/bin/sliver-server && \
     wget -q "https://github.com/BishopFox/sliver/releases/latest/download/sliver-client_linux" \
-        -O /usr/local/bin/sliver-client && chmod +x /usr/local/bin/sliver-client
+        -O /usr/local/bin/sliver-client && chmod +x /usr/local/bin/sliver-client 2>/dev/null || true
 
 # LinPEAS / WinPEAS
 RUN mkdir -p /opt/peas && \
@@ -262,7 +259,7 @@ RUN mkdir -p /opt/peas && \
         -O /opt/peas/linpeas.sh && chmod +x /opt/peas/linpeas.sh && \
     wget -q "https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEASx64.exe" \
         -O /opt/peas/winPEASx64.exe && \
-    ln -sf /opt/peas/linpeas.sh /usr/local/bin/linpeas
+    ln -sf /opt/peas/linpeas.sh /usr/local/bin/linpeas 2>/dev/null || true
 
 # ptunnel-ng - ICMP tunneling
 RUN git clone --depth 1 https://github.com/utoni/ptunnel-ng.git /opt/ptunnel-ng && \
