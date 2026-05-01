@@ -13,6 +13,8 @@
 [![CI](https://github.com/kalpmodi/akira/actions/workflows/validate-skills.yml/badge.svg?branch=dev)](https://github.com/kalpmodi/akira/actions/workflows/validate-skills.yml)
 
 
+<img src="demo.gif" alt="Akira demo" width="900"/>
+
 </div>
 
 ---
