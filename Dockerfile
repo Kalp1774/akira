@@ -101,10 +101,8 @@ RUN pip3 install --no-cache-dir --break-system-packages \
     pwncat-cs \
     objection \
     frida-tools \
-    crackmapexec \
     netexec \
     paramspider \
-    apk-mitm \
     requests \
     boto3 \
     google-cloud-storage \
