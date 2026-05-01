@@ -487,17 +487,6 @@ Open Claude Code, type `/plan-engagement target.com`.
 
 ---
 
-## Proof It Works
-
-| # | Type | Severity | Bounty | Chain |
-|---|---|---|---|---|
-| 1 | SSRF -> AWS IAM credential extraction | Critical | $2,500 | `/recon` -> `/exploit` -> `/cloud-audit` |
-| 2 | OAuth open redirect -> auth code interception | Critical | $1,800 | `/recon` -> `/oauth-attacks` |
-| 3 | Race condition: coupon applied 7x simultaneously | High | $800 | `/race-conditions` |
-| 4 | Strapi SSRF bypass + MIME fail-open (CVE filed) | Critical | - | `/zerodayhunt` |
-| 5 | JWT RS256->HS256 confusion -> admin access | Critical | $1,500 | `/zerodayhunt` |
-
----
 
 ## Roadmap
 
