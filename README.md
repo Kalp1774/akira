@@ -12,7 +12,6 @@
 [![Tech Files](https://img.shields.io/badge/technique_files-68-blue?style=flat-square)](#router-architecture)
 [![CI](https://github.com/kalpmodi/akira/actions/workflows/validate-skills.yml/badge.svg?branch=dev)](https://github.com/kalpmodi/akira/actions/workflows/validate-skills.yml)
 
-> **`dev` branch** - Basilisk v1.1.0. Stable release on `main`.
 
 </div>
 
