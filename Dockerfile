@@ -38,7 +38,7 @@ RUN apt-get update && apt-get install -y \
     hashcat john hydra crunch \
     # AD / Windows
     responder evil-winrm impacket-scripts \
-    crackmapexec \
+    crackmapexec nxc \
     # misc
     seclists wordlists \
     wabt \
@@ -101,7 +101,6 @@ RUN pip3 install --no-cache-dir --break-system-packages \
     pwncat-cs \
     objection \
     frida-tools \
-    netexec \
     paramspider \
     requests \
     boto3 \
