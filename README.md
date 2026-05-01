@@ -506,7 +506,7 @@ Open Claude Code, type `/plan-engagement target.com`.
 | Hydra v1.0.0 | Shipped | 12 core skills, session.json bus, 6-phase lifecycle |
 | Hydra v1.0.1 | Shipped | `403-bypass`, recon 23-step pipeline |
 | Hydra v1.0.2 | Shipped | Hypothesis engine, signal bus, fork scheduler, state machine |
-| **Basilisk v1.1.0** | **Dev** | Thin router + technique library, 68 tech files, unified Phase 0, race-proof signals, `/redteam` |
+| **Basilisk v1.1.0** | **Shipped** | Thin router + technique library, 68 tech files, unified Phase 0, race-proof signals, `/redteam` |
 | Raven v1.2.0 | Planned | Akira Context Engine: persistent cross-engagement memory, automatic tech fingerprint learning, `cache-attacks`, `csp-bypass` |
 | Phantom v1.3.0 | Planned | `mobile` DAST integration, `burp-mcp` live traffic feed into session.json |
 | Leviathan v2.0.0 | Planned | Autonomous orchestration: Akira Brain spawns and coordinates skills without user `/commands`, trained doom-loop predictor, `postmap-recon` |
