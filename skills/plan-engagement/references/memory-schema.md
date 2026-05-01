@@ -255,5 +255,5 @@ MEMORY=~/.akira/memory.json
 **On first run (memory.json does not exist):**
 ```bash
 mkdir -p ~/.akira
-# plan-engagement creates memory.json with defaults seeded from FINDINGS.md DNA registry
+# plan-engagement creates memory.json with defaults
 ```

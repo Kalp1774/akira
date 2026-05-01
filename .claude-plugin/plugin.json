@@ -1,6 +1,6 @@
 {
   "name": "akira",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The AI pentest co-pilot that actually finds bugs. Phase-chained, evidence-gated offensive security skills for bug bounty and authorized pentesting.",
   "author": {
     "name": "Kalp1774",
@@ -32,6 +32,9 @@
     "skills/oauth-attacks",
     "skills/race-conditions",
     "skills/cloud-audit",
-    "skills/ctf"
+    "skills/ctf",
+    "skills/403-bypass",
+    "skills/compact",
+    "skills/redteam"
   ]
 }

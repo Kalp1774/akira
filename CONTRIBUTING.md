@@ -20,17 +20,7 @@ Know a technique that belongs in one of the current skills?
 - Follow the existing format (bash code blocks + evidence requirement)
 - Open a PR
 
-### 3. Submit a Finding to FINDINGS.md
-Found a real bug using Akira? This is the most valuable contribution.
-
-After responsible disclosure:
-1. Open an issue with the `finding-submission` template
-2. Or directly open a PR adding your entry to FINDINGS.md
-3. Use the existing entry format (anonymized is fine)
-
-Attribution always included. Bounty amount is optional.
-
-### 4. Write a New Skill
+### 3. Write a New Skill
 Check the roadmap in README. If it's planned, open an issue to claim it before writing.
 If it's not on the roadmap but should exist, open a `new-skill` issue first to discuss.
 
@@ -103,7 +93,6 @@ Every technique should have been run against a real target (even a lab/CTF count
 ## PR Review
 
 PRs are reviewed by the maintainer within a few days.
-If your PR adds a finding to FINDINGS.md - instant merge (after basic check).
 If your PR improves an existing skill - fast review.
 If your PR adds a new skill - reviewed carefully for quality and completeness.
 

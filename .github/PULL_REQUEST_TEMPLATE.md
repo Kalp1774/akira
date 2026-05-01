@@ -8,7 +8,6 @@
 - [ ] Technique improvement (better commands, updated tool syntax)
 - [ ] New technique added to existing skill
 - [ ] New skill (new `skills/<name>/SKILL.md`)
-- [ ] FINDINGS.md entry (real finding submission)
 - [ ] Platform adapter (new environment support)
 - [ ] Documentation / README
 
@@ -22,13 +21,6 @@
 - [ ] Output format follows the `interesting_<phase>.md` schema
 - [ ] False positive scenarios documented
 - [ ] Tool commands tested and working
-
-## For FINDINGS.md entries
-
-- [ ] Finding is from an authorized engagement (bug bounty, authorized pentest, CTF)
-- [ ] Sensitive details anonymized (no target name required)
-- [ ] HTTP evidence included (exact request/response)
-- [ ] Skill chain documented
 
 ## Anything else?
 

@@ -16,16 +16,6 @@ This keeps the report private until it's fixed.
 
 ---
 
-## Reporting a Finding Made WITH Akira
-
-Found a real vulnerability using Akira on an authorized target?
-
-1. Report to the target first (responsible disclosure)
-2. After it's fixed or publicly disclosed, open a PR to add it to FINDINGS.md
-3. Anonymous is fine - program name optional, technique detail is what matters
-
----
-
 ## Suggesting New Techniques or Skills
 
 - Open an issue with label `technique-request` or `new-skill`

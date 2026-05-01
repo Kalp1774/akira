@@ -35,9 +35,8 @@ echo "Memory loaded. SCL counter: $SCL_COUNTER | Flagged techniques: $(echo $FLA
 If `~/.akira/memory.json` does not exist:
 ```bash
 mkdir -p ~/.akira
-# Bootstrap from FINDINGS.md DNA Registry (5 confirmed findings pre-seeded)
 # Write initial memory.json with defaults - see references/memory-schema.md
-# Set scl_id_counter to 6 (next after existing 5 findings)
+# Set scl_id_counter to 1
 ```
 
 **Use memory to calibrate hypothesis priors in Step 2:**

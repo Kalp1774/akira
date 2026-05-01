@@ -79,7 +79,6 @@ Like the mythological hydra, each skill operates independently but feeds the sam
 ### Added - Toolchain
 - `install.sh` - one-command skill installer
 - `bootstrap.sh` - installs nuclei, dalfox, subfinder, httpx, dnsx, ffuf, sqlmap, nmap, trufflehog
-- `FINDINGS.md` - live bug bounty findings (updated weekly)
 
 ---
 
