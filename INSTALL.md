@@ -7,7 +7,7 @@ git clone https://github.com/Kalp1774/akira
 cd akira && bash install.sh
 ```
 
-That installs all 13 skills into `~/.claude/skills/`. Open Claude Code and you're ready.
+That installs all 16 skills into `~/.claude/skills/`. Open Claude Code and you're ready.
 
 ---
 
@@ -33,6 +33,7 @@ bash bootstrap.sh    # install nuclei, dalfox, subfinder, httpx, sqlmap, etc.
 /recon target.com
 /secrets target.com
 /exploit target.com
+/zerodayhunt target.com
 /triage target.com
 /report target.com
 ```

@@ -6,11 +6,11 @@
 
 [![GitHub Stars](https://img.shields.io/github/stars/kalpmodi/akira?style=flat-square&color=yellow)](https://github.com/kalpmodi/akira/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/kalpmodi/akira?style=flat-square&color=blue)](https://github.com/kalpmodi/akira/network/members)
-[![Last Commit](https://img.shields.io/github/last-commit/kalpmodi/akira/dev?style=flat-square&color=green)](https://github.com/kalpmodi/akira/commits/dev)
+[![Last Commit](https://img.shields.io/github/last-commit/kalpmodi/akira/main?style=flat-square&color=green)](https://github.com/kalpmodi/akira/commits/main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-16-brightgreen?style=flat-square)](#skills)
 [![Tech Files](https://img.shields.io/badge/technique_files-68-blue?style=flat-square)](#router-architecture)
-[![CI](https://github.com/kalpmodi/akira/actions/workflows/validate-skills.yml/badge.svg?branch=dev)](https://github.com/kalpmodi/akira/actions/workflows/validate-skills.yml)
+[![CI](https://github.com/kalpmodi/akira/actions/workflows/validate-skills.yml/badge.svg?branch=main)](https://github.com/kalpmodi/akira/actions/workflows/validate-skills.yml)
 
 
 <img src="demo.gif" alt="Akira demo" width="900"/>
@@ -496,7 +496,6 @@ Open Claude Code, type `/plan-engagement target.com`.
 |---|---|---|
 | Hydra v1.0.0 | Shipped | 12 core skills, session.json bus, 6-phase lifecycle |
 | Hydra v1.0.1 | Shipped | `403-bypass`, recon 23-step pipeline |
-| Hydra v1.0.2 | Shipped | Hypothesis engine, signal bus, fork scheduler, state machine |
 | **Basilisk v1.1.0** | **Shipped** | Thin router + technique library, 68 tech files, unified Phase 0, race-proof signals, `/redteam` |
 | Raven v1.2.0 | Planned | Akira Context Engine: persistent cross-engagement memory, automatic tech fingerprint learning, `cache-attacks`, `csp-bypass` |
 | Phantom v1.3.0 | Planned | `mobile` DAST integration, `burp-mcp` live traffic feed into session.json |
