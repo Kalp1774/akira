@@ -83,19 +83,31 @@ Like the mythological hydra, each skill operates independently but feeds the sam
 
 ---
 
-## Upcoming
+---
 
-### [Basilisk - v1.1.0] - May 2026
+## [Basilisk - v1.1.0] - 2026-05-01
 
 *Kills through indirect contact. Supply chain, deserialization, prototype pollution.*
 
-The basilisk doesn't need to strike directly - it kills through its gaze. This release targets attack surfaces that compromise through indirect means.
+Architecture rewrite. Every skill got deeper. Two new skills shipped. Docker image now auto-published to GHCR.
 
-- `graphql` - introspection abuse, batching, field-level authz bypass
-- `deserialization` - ysoserial, PHPGGC, pickle chains
-- `prototype-pollution` - Node.js client + server RCE chains
-- `supply-chain` - dependency confusion, typosquatting, namespace squatting
-- `ci-cd-audit` - 9 GitHub Actions attack vectors
+### Added
+- `redteam` - full red team methodology: C2 frameworks, initial access, lateral movement, persistence, ADCS, delegation abuse, credential attacks, evasion, exfil, OPSEC, LOTL
+- `compact` - context compression skill for long engagements
+- `_shared` framework - cross-skill shared utilities (phase0 initialization, signal bus)
+- Dockerfile + GHCR auto-publish workflow (`docker pull ghcr.io/kalp1774/akira`)
+- `validate-skills` GitHub Actions CI workflow
+
+### Expanded
+- `exploit` - 9 new technique modules: deserialization, GraphQL, IDOR/mass assignment, CORS misconfiguration, cache smuggling, credential spray, 2FA bypass to ATO, business logic, JNDI/Log4Shell CVE chains
+- `recon` - 15 new technique modules: ASN/subdomain, cloud buckets, advanced DNS, GitHub recon, OSINT, reconFTW, scanners, supply chain, takeover, TLS fingerprinting, URL mining, Wayback deep-dive
+- `zerodayhunt` - 18 new technique modules: XS-leaks, JWT/SAML/SSO, SSRF/OOB, GraphQL, supply chain, CI/CD, file/crypto, WAF header mining, WebSocket/API, business logic, chain blueprints, mobile APK, race timing, SSTI/deser/XXE, CORS/host header, admin infra, client-side protocols, takeover/cloud
+- `plan-engagement` - session schema, memory schema, intelligence protocol, fork protocol references
+- All existing skills updated: `secrets`, `triage`, `report`, `oauth-attacks`, `race-conditions`, `cloud-audit`, `ad-attacks`
+
+---
+
+## Upcoming
 
 ### [Raven - v1.2.0] - June 2026
 
